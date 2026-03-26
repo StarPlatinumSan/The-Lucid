@@ -1,172 +1,411 @@
 ﻿<!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scènes | The Lucid</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Scènes | The Lucid</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-  <body>
-    <header class="sidebar">
-      <div class="sidebarTop">
-        <a class="brand" href="./main.html">
-          <img class="logoImg" src="images/logo.jpg" alt="Logo" />
-          <span class="mainTitle">The Lucid</span>
-        </a>
-      </div>
+	<body>
+		<header class="sidebar">
+			<div class="sidebarTop">
+				<a class="brand" href="./main.html">
+					<img class="logoImg" src="images/logo.jpg" alt="Logo" />
+					<span class="mainTitle">The Lucid</span>
+				</a>
+			</div>
 
-      <nav class="sidebarSection">
-        <span class="sectionLabel">Principal</span>
-        <a class="navLink" href="./main.html">Aperçu</a>
-        <a class="navLink" href="./actors.html">Acteurs</a>
-        <a class="navLink" href="./scenes.html" aria-current="page">Scènes</a>
-        <a class="navLink" href="./variables.html">Variables</a>
-        <a class="navLink" href="./endings.html">Fins</a>
-      </nav>
+			<nav class="sidebarSection">
+				<span class="sectionLabel">Principal</span>
+				<a class="navLink" href="./main.html">Aperçu</a>
+				<a class="navLink" href="./actors.html">Acteurs</a>
+				<a class="navLink" href="./scenes.html" aria-current="page">Scènes</a>
+				<a class="navLink" href="./variables.html">Variables</a>
+				<a class="navLink" href="./endings.html">Fins</a>
+			</nav>
 
-      <nav class="sidebarSection">
-        <span class="sectionLabel">Interfaces</span>
-        <a class="navLink" href="./choice.html">Choix</a>
-        <a class="navLink" href="./index.html">Stabilité</a>
-        <a class="navLink" href="./cadena.html">Statut chemin</a>
-      </nav>
-    </header>
+			<nav class="sidebarSection">
+				<span class="sectionLabel">Interfaces</span>
+				<a class="navLink" href="./choice.html">Choix</a>
+				<a class="navLink" href="./index.html">Stabilité</a>
+				<a class="navLink" href="./cadena.html">Statut chemin</a>
+			</nav>
+		</header>
 
-    <main class="contentPages">
-      <h1 class="pageTitle">Scènes et flux narratif</h1>
+		<main class="contentPages">
+			<h1 class="pageTitle">Scènes et flux narratif</h1>
 
-      <section class="panel">
-        <div class="panelHeader">
-          <h2 class="panelTitle">Carte rapide</h2>
-          <span class="badge">Épisodes + scènes</span>
-        </div>
+			<section class="panel">
+				<div class="panelHeader">
+					<h2 class="panelTitle">Carte rapide</h2>
+					<span class="badge">Épisodes + scènes</span>
+				</div>
 
-        <div class="sceneList">
-          <a class="sceneLink" href="#ep1">Épisode 1</a>
-          <a class="sceneLink" href="#ep2">Épisode 2</a>
-          <a class="sceneLink" href="#ep3">Épisode 3</a>
-          <a class="sceneLink" href="#ep4">Épisode 4</a>
-          <a class="sceneLink" href="#ep5">Épisode 5</a>
-          <a class="sceneLink" href="#sc6">Scène 6</a>
-          <a class="sceneLink" href="#sc7">Scène 7</a>
-          <a class="sceneLink" href="#sc8a">Scène 8a</a>
-          <a class="sceneLink" href="#sc8b">Scène 8b</a>
-          <a class="sceneLink" href="#flash">FLASH clips</a>
-        </div>
-      </section>
+				<div class="sceneList">
+					<a class="sceneLink" href="#roadmap">Roadmap tournage</a>
+					<a class="sceneLink" href="#ep1">Épisode 1</a>
+					<a class="sceneLink" href="#ep2">Épisode 2</a>
+					<a class="sceneLink" href="#ep3">Épisode 3</a>
+					<a class="sceneLink" href="#ep4">Épisode 4</a>
+					<a class="sceneLink" href="#ep5">Épisode 5</a>
+					<a class="sceneLink" href="#sc6">Scène 6</a>
+					<a class="sceneLink" href="#sc7">Scène 7</a>
+					<a class="sceneLink" href="#sc8a">Scène 8a</a>
+					<a class="sceneLink" href="#sc8b">Scène 8b</a>
+					<a class="sceneLink" href="#flash">FLASH clips</a>
+				</div>
+			</section>
 
-      <section class="panel" id="ep1">
-        <div class="panelHeader">
-          <h2 class="panelTitle">Épisode 1 - Scène 1</h2>
-          <span class="badge">~5 min</span>
-        </div>
-        <div class="sceneGrid">
-          <div class="sceneBlock"><div class="sceneKey">Lieu</div><div class="sceneVal">Condo à Yan</div></div>
-          <div class="sceneBlock"><div class="sceneKey">Heure</div><div class="sceneVal">Journée</div></div>
-          <div class="sceneBlock"><div class="sceneKey">Ambiance</div><div class="sceneVal">Tamisée avec volets, soleil</div></div>
-          <div class="sceneBlock"><div class="sceneKey">État MC</div><div class="sceneVal">NON-LUCID (léger, care-free)</div></div>
-        </div>
-        <p class="panelText">Ouverture philosophique sur le soleil, réveil, discussion avec Charles, timer de 3h pour retrouver Alex, choix 1.1/1.2, puis transition voiture (1.3).</p>
-      </section>
+			<section class="panel roadmapPanel" id="roadmap">
+				<div class="panelHeader">
+					<h2 class="panelTitle">Roadmap de tournage</h2>
+					<span class="badge">Placeholders prod</span>
+				</div>
+				<p class="panelText">Cliquez sur un noeud pour voir ses details. Remplacez ensuite les placeholders par vos vraies dates, contraintes et notes de tournage.</p>
 
-      <section class="panel" id="ep2">
-        <div class="panelHeader">
-          <h2 class="panelTitle">Épisode 2 - Chalet</h2>
-          <span class="badge">~5-8 min</span>
-        </div>
-        <div class="sceneGrid">
-          <div class="sceneBlock"><div class="sceneKey">Lieu</div><div class="sceneVal">Chalet du frère</div></div>
-          <div class="sceneBlock"><div class="sceneKey">Branches</div><div class="sceneVal">Brut force / Cabanon / Voisin / Fuite / Cacher</div></div>
-          <div class="sceneBlock"><div class="sceneKey">Mécaniques</div><div class="sceneVal">Flashbacks, malaise, premiers effets psychotiques</div></div>
-          <div class="sceneBlock"><div class="sceneKey">Noeuds clés</div><div class="sceneVal">2.9 Drogue, 2.10 Drogue/Caché, 2.11 et 2.12 Réveil</div></div>
-        </div>
-      </section>
+				<div class="roadmapInteractive" data-roadmap>
+					<div class="roadBlueprintScroll">
+						<div class="roadBlueprint" role="tablist" aria-label="Roadmap de tournage interactive">
+							<svg class="roadBlueprintSvg" viewBox="0 0 980 360" aria-hidden="true">
+								<defs>
+									<marker id="bpArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+										<path d="M 0 0 L 10 5 L 0 10 z"></path>
+									</marker>
+								</defs>
 
-      <section class="panel" id="ep3">
-        <div class="panelHeader">
-          <h2 class="panelTitle">Épisode 3 - Maison du frère</h2>
-          <span class="badge">Investigation</span>
-        </div>
-        <p class="panelText">Parcours de la maison (3.3 à 3.11), découverte des documents, rencontre du Curateur (3.12), puis arborescence dense de réactions lucide/non-lucide (3.16 à 3.25).</p>
-        <ul class="cleanBullets">
-          <li>Axes de jeu: coopérer, résister, manipuler, bluffer.</li>
-          <li>Objets en jeu: téléphone, arme, injecteur, doses.</li>
-          <li>Sortie de séquence: pacte forcé avec le Curateur.</li>
-        </ul>
-      </section>
+								<path class="bpFlow" d="M145 90 H175" marker-end="url(#bpArrow)"></path>
+								<path class="bpFlow" d="M285 90 H315" marker-end="url(#bpArrow)"></path>
+								<path class="bpFlow" d="M425 90 H455" marker-end="url(#bpArrow)"></path>
+								<path class="bpFlow" d="M565 90 H900 V160" marker-end="url(#bpArrow)"></path>
+								<path class="bpFlow" d="M845 190 H815" marker-end="url(#bpArrow)"></path>
+								<path class="bpFlow" d="M705 190 H675" marker-end="url(#bpArrow)"></path>
+								<path class="bpFlow" d="M565 190 H535" marker-end="url(#bpArrow)"></path>
+								<path class="bpFlow" d="M480 220 V270" marker-end="url(#bpArrow)"></path>
+								<path class="bpFlow" d="M535 300 H565" marker-end="url(#bpArrow)"></path>
+							</svg>
 
-      <section class="panel" id="ep4">
-        <div class="panelHeader">
-          <h2 class="panelTitle">Épisode 4 - Exposition Curateur</h2>
-          <span class="badge">4.0 à 4.7</span>
-        </div>
-        <p class="panelText">Le Curateur explique le système d'ondes, la chute de la lucidité, la logique des sous-terrains et l'instabilité du remède. Le MC doit ensuite répondre sur ses symptômes.</p>
-        <ul class="cleanBullets">
-          <li>4.4 Vérité: <b>PATH LOCKED</b>, variable <code>laboratoire = true</code>.</li>
-          <li>4.5 Mentir: <b>PATH UNLOCKED</b>, variable <code>laboratoire = false</code>.</li>
-          <li>4.7 Closure: setup de la forêt + arme + rendez-vous au hangar.</li>
-        </ul>
-      </section>
+							<button class="roadNode isActive" type="button" role="tab" aria-selected="true" data-node="n01" style="--x: 90px; --y: 90px">01 Episode 1</button>
+							<button class="roadNode" type="button" role="tab" aria-selected="false" data-node="n02" style="--x: 230px; --y: 90px">02 Episode 2</button>
+							<button class="roadNode" type="button" role="tab" aria-selected="false" data-node="n03" style="--x: 370px; --y: 90px">03 Episode 3</button>
+							<button class="roadNode relax" type="button" role="tab" aria-selected="false" data-node="n04" style="--x: 510px; --y: 90px">04 Episode 4</button>
+							<button class="roadNode" type="button" role="tab" aria-selected="false" data-node="n05" style="--x: 900px; --y: 190px">05 Episode 5</button>
+							<button class="roadNode" type="button" role="tab" aria-selected="false" data-node="n06" style="--x: 760px; --y: 190px">06 Scene 6</button>
+							<button class="roadNode" type="button" role="tab" aria-selected="false" data-node="n07" style="--x: 620px; --y: 190px">07 Scene 7</button>
+							<button class="roadNode relax" type="button" role="tab" aria-selected="false" data-node="n08" style="--x: 480px; --y: 190px">08 Scene 8a</button>
+							<button class="roadNode" type="button" role="tab" aria-selected="false" data-node="n09" style="--x: 480px; --y: 300px">09 Scene 8b</button>
+							<button class="roadNode relax" type="button" role="tab" aria-selected="false" data-node="n10" style="--x: 620px; --y: 300px">10 FLASH</button>
+						</div>
+					</div>
 
-      <section class="panel" id="ep5">
-        <div class="panelHeader">
-          <h2 class="panelTitle">Épisode 5 - Forêt</h2>
-          <span class="badge">5.0 à 5.23</span>
-        </div>
-        <p class="panelText">Le MC gère sa dose en forêt, voit une silhouette masquée, subit une chasse et traverse des branches de fuite/cache/menace. Le masque tombe: c'est Alex.</p>
-        <ul class="cleanBullets">
-          <li>Séquence de crise très ramifiée, mais convergente sur la rencontre frère.</li>
-          <li>Fin de séquence: alarme des 3h, pivot vers la scène des amis.</li>
-        </ul>
-      </section>
+					<div class="roadmapDetails">
+						<article class="roadDetail isActive" data-node="n01">
+							<div class="roadDetailHead">
+								<span class="roadDetailStep">01</span>
+								<h3 class="roadDetailTitle">Episode 1 - Scene 1</h3>
+							</div>
+							<div class="roadDetailMeta">
+								<span class="roadDetailPill">Date: [DATE TOURNAGE A CONFIRMER]</span>
+							</div>
+							<p class="roadDetailText">Contrainte: [CONTRAINTE PRINCIPALE A PRECISER]</p>
+							<p class="roadDetailHint">Note prod: [NOTE LOGISTIQUE / MATERIEL A PRECISER]</p>
+						</article>
 
-      <section class="panel" id="sc6">
-        <div class="panelHeader">
-          <h2 class="panelTitle">Scène 6 - Charles et les boys</h2>
-          <span class="badge">6.0 à 6.17</span>
-        </div>
-        <p class="panelText">Le MC tente de rendre Charles lucide (liqueur ou pilule), pendant que les téléphones et le "bruit" perturbent sa lucidité. La liqueur est la route la plus fiable pour éveiller Charles.</p>
-      </section>
+						<article class="roadDetail" data-node="n02">
+							<div class="roadDetailHead">
+								<span class="roadDetailStep">02</span>
+								<h3 class="roadDetailTitle">Episode 2 - Chalet</h3>
+							</div>
+							<div class="roadDetailMeta">
+								<span class="roadDetailPill">Date: [DATE TOURNAGE A CONFIRMER]</span>
+							</div>
+							<p class="roadDetailText">Contrainte: [CONTRAINTE PRINCIPALE A PRECISER]</p>
+							<p class="roadDetailHint">Note prod: [NOTE LOGISTIQUE / MATERIEL A PRECISER]</p>
+						</article>
 
-      <section class="panel" id="sc7">
-        <div class="panelHeader">
-          <h2 class="panelTitle">Scène 7 - Confrontation frère</h2>
-          <span class="badge">Pré-fins</span>
-        </div>
-        <p class="panelText">Retour au chalet, confrontation avec Alex, options de céder/contester/combattre. Résolution possible: passe pour Underground, perte d'accès, ou ligotage menant à des routes de fin.</p>
-      </section>
+						<article class="roadDetail" data-node="n03">
+							<div class="roadDetailHead">
+								<span class="roadDetailStep">03</span>
+								<h3 class="roadDetailTitle">Episode 3 - Maison du frère</h3>
+							</div>
+							<div class="roadDetailMeta">
+								<span class="roadDetailPill">Date: [DATE TOURNAGE A CONFIRMER]</span>
+							</div>
+							<p class="roadDetailText">Contrainte: [CONTRAINTE PRINCIPALE A PRECISER]</p>
+							<p class="roadDetailHint">Note prod: [NOTE LOGISTIQUE / MATERIEL A PRECISER]</p>
+						</article>
 
-      <section class="panel" id="sc8a">
-        <div class="panelHeader">
-          <h2 class="panelTitle">Scène 8a - Hangar</h2>
-          <span class="badge">Agent vs Curateur</span>
-        </div>
-        <p class="panelText">Le MC retrouve le Curateur ligoté et l'agent Mathias. Nouveau test d'identité lucide/non-lucide, potentielle exécution, possibilité de tirer, puis bifurcation vers les routes Agent/Curateur.</p>
-      </section>
+						<article class="roadDetail" data-node="n04">
+							<div class="roadDetailHead">
+								<span class="roadDetailStep">04</span>
+								<h3 class="roadDetailTitle">Episode 4 - Exposition Curateur</h3>
+							</div>
+							<div class="roadDetailMeta">
+								<span class="roadDetailPill">Date: [DATE TOURNAGE A CONFIRMER]</span>
+							</div>
+							<p class="roadDetailText">Contrainte: [CONTRAINTE PRINCIPALE A PRECISER]</p>
+							<p class="roadDetailHint">Note prod: [NOTE LOGISTIQUE / MATERIEL A PRECISER]</p>
+						</article>
 
-      <section class="panel" id="sc8b">
-        <div class="panelHeader">
-          <h2 class="panelTitle">Scène 8b - Underground</h2>
-          <span class="badge">Contrôle final</span>
-        </div>
-        <p class="panelText">Le MC doit passer un questionnaire de vérification en voiture. S'il échoue, il reçoit l'ultimatum menant soit à "Deal with the Devil", soit à une route Brotherhood.</p>
-      </section>
+						<article class="roadDetail" data-node="n05">
+							<div class="roadDetailHead">
+								<span class="roadDetailStep">05</span>
+								<h3 class="roadDetailTitle">Episode 5 - Foret</h3>
+							</div>
+							<div class="roadDetailMeta">
+								<span class="roadDetailPill">Date: [DATE TOURNAGE A CONFIRMER]</span>
+							</div>
+							<p class="roadDetailText">Contrainte: [CONTRAINTE PRINCIPALE A PRECISER]</p>
+							<p class="roadDetailHint">Note prod: [NOTE LOGISTIQUE / MATERIEL A PRECISER]</p>
+						</article>
 
-      <section class="panel" id="flash">
-        <div class="panelHeader">
-          <h2 class="panelTitle">FLASH clips</h2>
-          <span class="badge">5 inserts</span>
-        </div>
-        <ul class="cleanBullets">
-          <li>FLASH 1: bulletin scientifique sur l'hyperflare solaire.</li>
-          <li>FLASH 2: urgence mondiale, loi martiale, violences.</li>
-          <li>FLASH 3: reporter terrain en panique, coupure brutale.</li>
-          <li>FLASH 4: message gouvernemental "Projet Dernier Bastion".</li>
-          <li>FLASH 5: homme masqué en noir, zoom, voix "Ouvre les yeux" (si voisin).</li>
-        </ul>
-      </section>
-    </main>
-  </body>
+						<article class="roadDetail" data-node="n06">
+							<div class="roadDetailHead">
+								<span class="roadDetailStep">06</span>
+								<h3 class="roadDetailTitle">Scene 6 - Charles et les boys</h3>
+							</div>
+							<div class="roadDetailMeta">
+								<span class="roadDetailPill">Date: [DATE TOURNAGE A CONFIRMER]</span>
+							</div>
+							<p class="roadDetailText">Contrainte: [CONTRAINTE PRINCIPALE A PRECISER]</p>
+							<p class="roadDetailHint">Note prod: [NOTE LOGISTIQUE / MATERIEL A PRECISER]</p>
+						</article>
+
+						<article class="roadDetail" data-node="n07">
+							<div class="roadDetailHead">
+								<span class="roadDetailStep">07</span>
+								<h3 class="roadDetailTitle">Scene 7 - Confrontation frère</h3>
+							</div>
+							<div class="roadDetailMeta">
+								<span class="roadDetailPill">Date: [DATE TOURNAGE A CONFIRMER]</span>
+							</div>
+							<p class="roadDetailText">Contrainte: [CONTRAINTE PRINCIPALE A PRECISER]</p>
+							<p class="roadDetailHint">Note prod: [NOTE LOGISTIQUE / MATERIEL A PRECISER]</p>
+						</article>
+
+						<article class="roadDetail" data-node="n08">
+							<div class="roadDetailHead">
+								<span class="roadDetailStep">08</span>
+								<h3 class="roadDetailTitle">Scene 8a - Hangar</h3>
+							</div>
+							<div class="roadDetailMeta">
+								<span class="roadDetailPill">Date: [DATE TOURNAGE A CONFIRMER]</span>
+							</div>
+							<p class="roadDetailText">Contrainte: [CONTRAINTE PRINCIPALE A PRECISER]</p>
+							<p class="roadDetailHint">Note prod: [NOTE LOGISTIQUE / MATERIEL A PRECISER]</p>
+						</article>
+
+						<article class="roadDetail" data-node="n09">
+							<div class="roadDetailHead">
+								<span class="roadDetailStep">09</span>
+								<h3 class="roadDetailTitle">Scene 8b - Underground</h3>
+							</div>
+							<div class="roadDetailMeta">
+								<span class="roadDetailPill">Date: [DATE TOURNAGE A CONFIRMER]</span>
+							</div>
+							<p class="roadDetailText">Contrainte: [CONTRAINTE PRINCIPALE A PRECISER]</p>
+							<p class="roadDetailHint">Note prod: [NOTE LOGISTIQUE / MATERIEL A PRECISER]</p>
+						</article>
+
+						<article class="roadDetail" data-node="n10">
+							<div class="roadDetailHead">
+								<span class="roadDetailStep">10</span>
+								<h3 class="roadDetailTitle">FLASH clips</h3>
+							</div>
+							<div class="roadDetailMeta">
+								<span class="roadDetailPill">Date: [DATE TOURNAGE A CONFIRMER]</span>
+							</div>
+							<p class="roadDetailText">Contrainte: [CONTRAINTE PRINCIPALE A PRECISER]</p>
+							<p class="roadDetailHint">Note prod: [NOTE LOGISTIQUE / MATERIEL A PRECISER]</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="panel" id="ep1">
+				<div class="panelHeader">
+					<h2 class="panelTitle">Épisode 1 - Scène 1</h2>
+					<span class="badge">~5 min</span>
+				</div>
+				<div class="sceneGrid">
+					<div class="sceneBlock">
+						<div class="sceneKey">Lieu</div>
+						<div class="sceneVal">Condo à Yan</div>
+					</div>
+					<div class="sceneBlock">
+						<div class="sceneKey">Heure</div>
+						<div class="sceneVal">Journée</div>
+					</div>
+					<div class="sceneBlock">
+						<div class="sceneKey">Ambiance</div>
+						<div class="sceneVal">Tamisée avec volets, soleil</div>
+					</div>
+					<div class="sceneBlock">
+						<div class="sceneKey">État MC</div>
+						<div class="sceneVal">NON-LUCID (léger, care-free)</div>
+					</div>
+				</div>
+				<p class="panelText">Ouverture philosophique sur le soleil, réveil, discussion avec Charles, timer de 3h pour retrouver Alex, choix 1.1/1.2, puis transition voiture (1.3).</p>
+			</section>
+
+			<section class="panel" id="ep2">
+				<div class="panelHeader">
+					<h2 class="panelTitle">Épisode 2 - Chalet</h2>
+					<span class="badge">~5-8 min</span>
+				</div>
+				<div class="sceneGrid">
+					<div class="sceneBlock">
+						<div class="sceneKey">Lieu</div>
+						<div class="sceneVal">Chalet du frère</div>
+					</div>
+					<div class="sceneBlock">
+						<div class="sceneKey">Branches</div>
+						<div class="sceneVal">Brut force / Cabanon / Voisin / Fuite / Cacher</div>
+					</div>
+					<div class="sceneBlock">
+						<div class="sceneKey">Mécaniques</div>
+						<div class="sceneVal">Flashbacks, malaise, premiers effets psychotiques</div>
+					</div>
+					<div class="sceneBlock">
+						<div class="sceneKey">Noeuds clés</div>
+						<div class="sceneVal">2.9 Drogue, 2.10 Drogue/Caché, 2.11 et 2.12 Réveil</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="panel" id="ep3">
+				<div class="panelHeader">
+					<h2 class="panelTitle">Épisode 3 - Maison du frère</h2>
+					<span class="badge">Investigation</span>
+				</div>
+				<p class="panelText">Parcours de la maison (3.3 à 3.11), découverte des documents, rencontre du Curateur (3.12), puis arborescence dense de réactions lucide/non-lucide (3.16 à 3.25).</p>
+				<ul class="cleanBullets">
+					<li>Axes de jeu: coopérer, résister, manipuler, bluffer.</li>
+					<li>Objets en jeu: téléphone, arme, injecteur, doses.</li>
+					<li>Sortie de séquence: pacte forcé avec le Curateur.</li>
+				</ul>
+			</section>
+
+			<section class="panel" id="ep4">
+				<div class="panelHeader">
+					<h2 class="panelTitle">Épisode 4 - Exposition Curateur</h2>
+					<span class="badge">4.0 à 4.7</span>
+				</div>
+				<p class="panelText">Le Curateur explique le système d'ondes, la chute de la lucidité, la logique des sous-terrains et l'instabilité du remède. Le MC doit ensuite répondre sur ses symptômes.</p>
+				<ul class="cleanBullets">
+					<li>4.4 Vérité: <b>PATH LOCKED</b>, variable <code>laboratoire = true</code>.</li>
+					<li>4.5 Mentir: <b>PATH UNLOCKED</b>, variable <code>laboratoire = false</code>.</li>
+					<li>4.7 Closure: setup de la forêt + arme + rendez-vous au hangar.</li>
+				</ul>
+			</section>
+
+			<section class="panel" id="ep5">
+				<div class="panelHeader">
+					<h2 class="panelTitle">Épisode 5 - Forêt</h2>
+					<span class="badge">5.0 à 5.23</span>
+				</div>
+				<p class="panelText">Le MC gère sa dose en forêt, voit une silhouette masquée, subit une chasse et traverse des branches de fuite/cache/menace. Le masque tombe: c'est Alex.</p>
+				<ul class="cleanBullets">
+					<li>Séquence de crise très ramifiée, mais convergente sur la rencontre frère.</li>
+					<li>Fin de séquence: alarme des 3h, pivot vers la scène des amis.</li>
+				</ul>
+			</section>
+
+			<section class="panel" id="sc6">
+				<div class="panelHeader">
+					<h2 class="panelTitle">Scène 6 - Charles et les boys</h2>
+					<span class="badge">6.0 à 6.17</span>
+				</div>
+				<p class="panelText">Le MC tente de rendre Charles lucide (liqueur ou pilule), pendant que les téléphones et le "bruit" perturbent sa lucidité. La liqueur est la route la plus fiable pour éveiller Charles.</p>
+			</section>
+
+			<section class="panel" id="sc7">
+				<div class="panelHeader">
+					<h2 class="panelTitle">Scène 7 - Confrontation frère</h2>
+					<span class="badge">Pré-fins</span>
+				</div>
+				<p class="panelText">Retour au chalet, confrontation avec Alex, options de céder/contester/combattre. Résolution possible: passe pour Underground, perte d'accès, ou ligotage menant à des routes de fin.</p>
+			</section>
+
+			<section class="panel" id="sc8a">
+				<div class="panelHeader">
+					<h2 class="panelTitle">Scène 8a - Hangar</h2>
+					<span class="badge">Agent vs Curateur</span>
+				</div>
+				<p class="panelText">Le MC retrouve le Curateur ligoté et l'agent Mathias. Nouveau test d'identité lucide/non-lucide, potentielle exécution, possibilité de tirer, puis bifurcation vers les routes Agent/Curateur.</p>
+			</section>
+
+			<section class="panel" id="sc8b">
+				<div class="panelHeader">
+					<h2 class="panelTitle">Scène 8b - Underground</h2>
+					<span class="badge">Contrôle final</span>
+				</div>
+				<p class="panelText">Le MC doit passer un questionnaire de vérification en voiture. S'il échoue, il reçoit l'ultimatum menant soit à "Deal with the Devil", soit à une route Brotherhood.</p>
+			</section>
+
+			<section class="panel" id="flash">
+				<div class="panelHeader">
+					<h2 class="panelTitle">FLASH clips</h2>
+					<span class="badge">5 inserts</span>
+				</div>
+				<ul class="cleanBullets">
+					<li>FLASH 1: bulletin scientifique sur l'hyperflare solaire.</li>
+					<li>FLASH 2: urgence mondiale, loi martiale, violences.</li>
+					<li>FLASH 3: reporter terrain en panique, coupure brutale.</li>
+					<li>FLASH 4: message gouvernemental "Projet Dernier Bastion".</li>
+					<li>FLASH 5: homme masqué en noir, zoom, voix "Ouvre les yeux" (si voisin).</li>
+				</ul>
+			</section>
+		</main>
+
+		<script>
+			(() => {
+				const root = document.querySelector("[data-roadmap]");
+				if (!root) return;
+
+				const nodes = [...root.querySelectorAll(".roadNode")];
+				const details = [...root.querySelectorAll(".roadDetail")];
+				const sequence = ["n01", "n02", "n03", "n04", "n05", "n06", "n07", "n08", "n09", "n10"];
+
+				function getNodeById(id) {
+					return nodes.find((node) => node.dataset.node === id);
+				}
+
+				function setActive(nodeId) {
+					nodes.forEach((node) => {
+						const active = node.dataset.node === nodeId;
+						node.classList.toggle("isActive", active);
+						node.setAttribute("aria-selected", active ? "true" : "false");
+						node.tabIndex = active ? 0 : -1;
+					});
+
+					details.forEach((detail) => {
+						detail.classList.toggle("isActive", detail.dataset.node === nodeId);
+					});
+				}
+
+				nodes.forEach((node) => {
+					node.addEventListener("click", () => setActive(node.dataset.node));
+
+					node.addEventListener("keydown", (event) => {
+						if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+						event.preventDefault();
+
+						const offset = event.key === "ArrowRight" ? 1 : -1;
+						const currentIndex = sequence.indexOf(node.dataset.node);
+						const nextIndex = (currentIndex + offset + sequence.length) % sequence.length;
+						const nextNode = getNodeById(sequence[nextIndex]);
+						if (!nextNode) return;
+						nextNode.focus();
+						setActive(nextNode.dataset.node);
+					});
+				});
+
+				const initialNode = nodes.find((node) => node.classList.contains("isActive")) || nodes[0];
+				if (initialNode) {
+					setActive(initialNode.dataset.node);
+				}
+			})();
+		</script>
+	</body>
 </html>
-

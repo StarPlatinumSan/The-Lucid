@@ -350,7 +350,7 @@ label {
 
 .actorRow {
 	display: grid;
-	grid-template-columns: 1.2fr 1fr auto;
+	grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) 190px;
 	gap: 12px;
 	align-items: center;
 	padding: 11px 12px;
@@ -377,6 +377,7 @@ label {
 	font-size: 12px;
 	color: var(--text-2);
 	white-space: nowrap;
+	text-align: right;
 }
 
 .sceneList {
@@ -447,6 +448,196 @@ label {
 	text-transform: uppercase;
 }
 
+.roadmapPanel {
+	position: relative;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.01);
+}
+
+.roadmapInteractive {
+	display: grid;
+	gap: 10px;
+	margin-top: 12px;
+}
+
+.roadBlueprintScroll {
+	overflow-x: auto;
+	padding-bottom: 4px;
+}
+
+.roadBlueprint {
+	position: relative;
+	width: 980px;
+	height: 360px;
+	border-radius: 12px;
+	border: 1px solid rgba(78, 143, 255, 0.25);
+	background: linear-gradient(180deg, rgba(9, 13, 22, 0.96), rgba(7, 11, 18, 0.98));
+}
+
+.roadBlueprintSvg {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.roadBlueprintSvg #bpArrow path {
+	fill: #4e8fff;
+}
+
+.bpFlow {
+	fill: none;
+	stroke: #4e8fff;
+	stroke-width: 2.4;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.roadNode {
+	cursor: pointer;
+	position: absolute;
+	left: var(--x);
+	top: var(--y);
+	transform: translate(-50%, -50%);
+	border-radius: 6px;
+	border: 1.5px solid #8f1c1f;
+	background: #d9383c;
+	color: #fff5f5;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	padding: 8px 11px;
+	white-space: nowrap;
+	transition:
+		border-color 120ms ease,
+		color 120ms ease,
+		background 120ms ease,
+		transform 120ms ease,
+		box-shadow 120ms ease;
+}
+
+.roadNode:hover {
+	border-color: #ff8d90;
+	background: #e24448;
+	transform: translate(-50%, calc(-50% - 1px));
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.roadNode.isActive {
+	box-shadow:
+		0 0 0 2px rgba(217, 56, 60, 0.36),
+		0 6px 14px rgba(0, 0, 0, 0.28);
+}
+
+.roadNode.relax {
+	background: #2ebd6b;
+	border-color: #1a6e3d;
+	color: #04120b;
+}
+
+.roadNode.relax:hover {
+	border-color: #68ef9f;
+	background: #3acb78;
+}
+
+.roadNode.relax.isActive {
+	box-shadow:
+		0 0 0 2px rgba(46, 189, 107, 0.36),
+		0 6px 14px rgba(0, 0, 0, 0.28);
+}
+
+.roadNode:focus-visible {
+	outline: none;
+	box-shadow: 0 0 0 2px rgba(127, 217, 255, 0.42);
+}
+
+.roadmapDetails {
+	position: relative;
+}
+
+.roadDetail {
+	display: none;
+	border-radius: var(--radius-m);
+	border: 1px solid var(--border-0);
+	background: rgba(255, 255, 255, 0.02);
+	padding: 12px;
+}
+
+.roadDetail.isActive {
+	display: block;
+	animation: roadDetailIn 160ms ease-out;
+}
+
+.roadDetailHead {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	margin-bottom: 8px;
+}
+
+.roadDetailStep {
+	display: inline-grid;
+	place-items: center;
+	width: 24px;
+	height: 24px;
+	border-radius: 7px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.04);
+	font-size: 10px;
+	font-weight: 800;
+	letter-spacing: 0.1em;
+	color: var(--text-0);
+}
+
+.roadDetailTitle {
+	font-family: "Space Grotesk", "Manrope", sans-serif;
+	font-size: 0.92rem;
+	letter-spacing: 0.02em;
+}
+
+.roadDetailMeta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 8px;
+}
+
+.roadDetailPill {
+	display: inline-flex;
+	align-items: center;
+	padding: 4px 8px;
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	background: rgba(255, 255, 255, 0.02);
+	font-size: 10px;
+	font-weight: 600;
+	letter-spacing: 0.03em;
+	color: var(--text-1);
+}
+
+.roadDetailText {
+	font-size: 13px;
+	color: var(--text-1);
+	margin-bottom: 4px;
+}
+
+.roadDetailHint {
+	font-size: 12px;
+	color: var(--text-2);
+}
+
+@keyframes roadDetailIn {
+	from {
+		opacity: 0;
+		transform: translateY(6px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 .choiceList {
 	display: flex;
 	justify-content: center;
@@ -455,7 +646,7 @@ label {
 	gap: 1rem;
 	align-self: center;
 	position: fixed;
-	left: 50%;
+	left: 55%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	width: 100%;
@@ -548,6 +739,35 @@ label {
 	.grid2,
 	.sceneGrid {
 		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 640px) {
+	.actorRow {
+		grid-template-columns: 1fr;
+		gap: 6px;
+	}
+
+	.meta {
+		text-align: left;
+	}
+
+	.roadBlueprint {
+		width: 900px;
+		height: 340px;
+	}
+
+	.roadNode {
+		padding: 6px 8px;
+		font-size: 9px;
+	}
+
+	.roadDetail {
+		padding: 11px 10px;
+	}
+
+	.roadDetailPill {
+		font-size: 10px;
 	}
 }
 
