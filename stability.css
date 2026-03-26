@@ -1,89 +1,99 @@
-:root {
-  --bg: #07090c;
-  --border: rgba(255, 255, 255, 0.12);
-  --muted: rgba(255, 255, 255, 0.65);
-  --text: rgba(255, 255, 255, 0.92);
-  --shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
-  --accent: #35e08f;
-  --accentGlow: rgba(53, 224, 143, 0.25);
+﻿:root {
+	--bg: #07090c;
+	--border: rgba(255, 255, 255, 0.12);
+	--muted: rgba(255, 255, 255, 0.65);
+	--text: rgba(255, 255, 255, 0.92);
+	--shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+	--accent: #35e08f;
+	--accentGlow: rgba(53, 224, 143, 0.25);
 }
 
 .stability-ui {
-  width: min(720px, calc(100vw - 32px));
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+body.stabilityPage {
+	padding-left: 248px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Keep legacy visual style, centered in the usable area. */
+body.stabilityPage .stability-ui {
 }
 
 input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
 }
 
 .controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 14px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 14px;
 }
 
 .card {
-  width: 50%;
-  border-radius: 18px;
-  padding: 18px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.04));
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  position: relative;
-  overflow: hidden;
+	width: 50%;
+	border-radius: 18px;
+	padding: 18px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.04));
+	border: 1px solid var(--border);
+	box-shadow: var(--shadow);
+	position: relative;
+	overflow: hidden;
 }
 
 .card::before {
-  content: "";
-  position: absolute;
-  inset: -60% -40%;
-  background: radial-gradient(circle at 25% 35%, var(--accentGlow), transparent 55%);
-  filter: blur(12px);
-  pointer-events: none;
+	content: "";
+	position: absolute;
+	inset: -60% -40%;
+	background: radial-gradient(circle at 25% 35%, var(--accentGlow), transparent 55%);
+	filter: blur(12px);
+	pointer-events: none;
 }
 
 .card-inner {
-  display: grid;
-  grid-template-columns: 14px 1fr auto;
-  gap: 14px;
-  align-items: center;
+	display: grid;
+	grid-template-columns: 14px 1fr auto;
+	gap: 14px;
+	align-items: center;
 }
 
 .bar {
-  width: 10px;
-  height: 62px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 90%, white 10%), var(--accent));
+	width: 10px;
+	height: 62px;
+	border-radius: 999px;
+	background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 90%, white 10%), var(--accent));
 }
 
 .label {
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  color: var(--muted);
-  text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 0.18em;
+	color: var(--muted);
+	text-transform: uppercase;
 }
 
 .value {
-  position: relative;
-  min-height: 1.2em;
-  font-size: 34px;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  color: var(--accent);
-  text-shadow: 0 0 18px var(--accentGlow);
+	position: relative;
+	min-height: 1.2em;
+	font-size: 34px;
+	font-weight: 800;
+	letter-spacing: 0.06em;
+	color: var(--accent);
+	text-shadow: 0 0 18px var(--accentGlow);
 }
 
 .value span {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
 }
 
 #s0:checked ~ .card .value .v0,
@@ -92,149 +102,149 @@ input[type="radio"] {
 #s3:checked ~ .card .value .v3,
 #s4:checked ~ .card .value .v4,
 #s5:checked ~ .card .value .v5 {
-  opacity: 1;
-  animation: textRollUp 700ms cubic-bezier(0.22, 0.61, 0.36, 1);
+	opacity: 1;
+	animation: textRollUp 700ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .trend {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	width: 54px;
+	height: 54px;
+	border-radius: 16px;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .arrow {
-  width: 24px;
-  height: 16px;
-  position: relative;
-  animation: dropPulse 900ms ease-in-out infinite;
+	width: 24px;
+	height: 16px;
+	position: relative;
+	animation: dropPulse 900ms ease-in-out infinite;
 }
 
 .arrow::before,
 .arrow::after {
-  content: "";
-  position: absolute;
-  left: 60%;
-  bottom: 0;
-  width: 4px;
-  height: 16px;
-  background: color-mix(in srgb, var(--accent) 70%, white 30%);
-  border-radius: 2px;
-  transform-origin: bottom center;
-  box-shadow: 0 0 14px var(--accentGlow);
+	content: "";
+	position: absolute;
+	left: 60%;
+	bottom: 0;
+	width: 4px;
+	height: 16px;
+	background: color-mix(in srgb, var(--accent) 70%, white 30%);
+	border-radius: 2px;
+	transform-origin: bottom center;
+	box-shadow: 0 0 14px var(--accentGlow);
 }
 
 .arrow::before {
-  transform: translateX(-110%) rotate(45deg);
+	transform: translateX(-110%) rotate(45deg);
 }
 
 .arrow::after {
-  transform: translateX(-70%) rotate(-45deg);
+	transform: translateX(-70%) rotate(-45deg);
 }
 
 @keyframes statusIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes statusIn0 {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes statusIn1 {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes statusIn2 {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes statusIn3 {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes statusIn4 {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes statusIn5 {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 #s0:checked ~ .card {
-  animation: statusIn0 500ms ease-out;
+	animation: statusIn0 500ms ease-out;
 }
 
 #s1:checked ~ .card {
-  animation: statusIn1 500ms ease-out;
+	animation: statusIn1 500ms ease-out;
 }
 
 #s2:checked ~ .card {
-  animation: statusIn2 500ms ease-out;
+	animation: statusIn2 500ms ease-out;
 }
 
 #s3:checked ~ .card {
-  animation: statusIn3 500ms ease-out;
+	animation: statusIn3 500ms ease-out;
 }
 
 #s4:checked ~ .card {
-  animation: statusIn4 500ms ease-out;
+	animation: statusIn4 500ms ease-out;
 }
 
 #s5:checked ~ .card {
-  animation: statusIn5 500ms ease-out;
+	animation: statusIn5 500ms ease-out;
 }
 
 #s0:checked ~ .card .value,
@@ -243,65 +253,65 @@ input[type="radio"] {
 #s3:checked ~ .card .value,
 #s4:checked ~ .card .value,
 #s5:checked ~ .card .value {
-  animation: statusIn 200ms ease-out;
+	animation: statusIn 200ms ease-out;
 }
 
 @keyframes textRollUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-    filter: blur(1px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+		filter: blur(1px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+		filter: blur(0);
+	}
 }
 
 @keyframes dropPulse {
-  0% {
-    transform: translateY(-6px);
-    opacity: 0.55;
-  }
-  45% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(10px);
-    opacity: 0.35;
-  }
+	0% {
+		transform: translateY(-6px);
+		opacity: 0.55;
+	}
+	45% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(10px);
+		opacity: 0.35;
+	}
 }
 
 #s0:checked ~ .card {
-  --accent: #35e08f;
-  --accentGlow: rgba(53, 224, 143, 0.25);
+	--accent: #35e08f;
+	--accentGlow: rgba(53, 224, 143, 0.25);
 }
 
 #s1:checked ~ .card {
-  --accent: #d9f05a;
-  --accentGlow: rgba(217, 240, 90, 0.22);
+	--accent: #d9f05a;
+	--accentGlow: rgba(217, 240, 90, 0.22);
 }
 
 #s2:checked ~ .card {
-  --accent: #ffcc4d;
-  --accentGlow: rgba(255, 204, 77, 0.22);
+	--accent: #ffcc4d;
+	--accentGlow: rgba(255, 204, 77, 0.22);
 }
 
 #s3:checked ~ .card {
-  --accent: #ff8a3d;
-  --accentGlow: rgba(255, 138, 61, 0.22);
+	--accent: #ff8a3d;
+	--accentGlow: rgba(255, 138, 61, 0.22);
 }
 
 #s4:checked ~ .card {
-  --accent: #ff4d4d;
-  --accentGlow: rgba(255, 77, 77, 0.22);
+	--accent: #ff4d4d;
+	--accentGlow: rgba(255, 77, 77, 0.22);
 }
 
 #s5:checked ~ .card {
-  --accent: #ff2a2a;
-  --accentGlow: rgba(255, 42, 42, 0.24);
+	--accent: #ff2a2a;
+	--accentGlow: rgba(255, 42, 42, 0.24);
 }
 
 #s0:checked ~ .card .v0,
@@ -310,5 +320,5 @@ input[type="radio"] {
 #s3:checked ~ .card .v3,
 #s4:checked ~ .card .v4,
 #s5:checked ~ .card .v5 {
-  display: inline;
+	display: inline;
 }

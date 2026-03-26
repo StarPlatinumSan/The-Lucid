@@ -1,215 +1,241 @@
-:root {
-  --bg: #07090c;
-  --border: rgba(255, 255, 255, 0.12);
-  --panelTop: #161a20;
-  --panelBot: #0c0f14;
-  --stroke: rgba(255, 255, 255, 0.07);
+﻿:root {
+	--bg: #07090c;
+	--border: rgba(255, 255, 255, 0.12);
+	--panelTop: #161a20;
+	--panelBot: #0c0f14;
+	--stroke: rgba(255, 255, 255, 0.07);
 
-  --text: rgba(255, 255, 255, 0.9);
-  --muted: rgba(255, 255, 255, 0.55);
+	--text: rgba(255, 255, 255, 0.9);
+	--muted: rgba(255, 255, 255, 0.55);
 
-  --locked: #ff3b3b;
-  --unlocked: #4aa3ff;
+	--locked: #ff3b3b;
+	--unlocked: #4aa3ff;
 
-  --icon: rgba(0, 0, 0, 0.85);
+	--icon: rgba(0, 0, 0, 0.85);
+}
+
+.cadenaUI {
+	padding-top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	gap: 1rem;
+}
+
+body.cadenaPage {
+	padding-left: 248px;
 }
 
 .statusBar {
-  height: 84px;
-  border-radius: 16px;
-  background: linear-gradient(180deg, var(--panelTop), var(--panelBot));
-  border: 1px solid var(--stroke);
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55);
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  gap: 18px;
-  position: relative;
-  overflow: hidden;
+	border-radius: 16px;
+	background: linear-gradient(180deg, var(--panelTop), var(--panelBot));
+	border: 1px solid var(--stroke);
+	box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55);
+	display: flex;
+	align-items: center;
+	max-width: fit-content;
+	padding: 1rem;
+	gap: 18px;
+	position: relative;
+	overflow: hidden;
 }
 
 .statusBar::before {
-  content: "";
-  position: absolute;
-  inset: -30px;
-  opacity: 0.22;
-  pointer-events: none;
-  transition: opacity 200ms ease;
+	content: "";
+	position: absolute;
+	inset: -30px;
+	opacity: 0.22;
+	pointer-events: none;
+	transition: opacity 200ms ease;
 }
 
 .statusBar.locked::before {
-  background: radial-gradient(360px 160px at 50% 50%, rgba(255, 59, 59, 0.35), transparent 60%);
+	background: radial-gradient(360px 160px at 50% 50%, rgba(255, 59, 59, 0.35), transparent 60%);
 }
 
 .statusBar.unlocked::before {
-  background: radial-gradient(360px 160px at 50% 50%, rgba(74, 163, 255, 0.35), transparent 60%);
+	background: radial-gradient(360px 160px at 50% 50%, rgba(74, 163, 255, 0.35), transparent 60%);
 }
 
 .rail {
-  width: 6px;
-  height: 44px;
-  border-radius: 999px;
-  background: var(--locked);
+	width: 6px;
+	height: 44px;
+	border-radius: 999px;
+	background: var(--locked);
 }
 
 .statusBar.unlocked .rail {
-  background: var(--unlocked);
+	background: var(--unlocked);
 }
 
 .content {
-  display: grid;
-  text-align: center;
-  z-index: 1;
+	display: grid;
+	text-align: center;
+	z-index: 1;
 }
 
 .label {
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  text-align: start;
-  color: var(--muted);
+	font-size: 0.7rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	text-align: start;
+	color: var(--muted);
 }
 
 .stateRow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
 }
 
 .stateText {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--locked);
+	font-size: 1.6rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--locked);
 }
 
 .statusBar.unlocked .stateText {
-  color: var(--unlocked);
+	color: var(--unlocked);
 }
 
 .lockWrap {
-  width: 52px;
-  height: 38px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent);
-  display: grid;
-  place-items: center;
+	width: 52px;
+	height: 38px;
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent);
+	display: grid;
+	place-items: center;
 }
 
 .lock {
-  width: 22px;
-  height: 18px;
-  position: relative;
+	width: 22px;
+	height: 18px;
+	position: relative;
 }
 
 .bodyIcon {
-  position: absolute;
-  left: 2px;
-  bottom: 0;
-  width: 18px;
-  height: 12px;
-  border-radius: 2px;
-  background: var(--icon);
+	position: absolute;
+	left: 2px;
+	bottom: 0;
+	width: 18px;
+	height: 12px;
+	border-radius: 2px;
+	background: var(--icon);
 }
 
 .shackle {
-  position: absolute;
-  left: 4px;
-  top: 0;
-  width: 14px;
-  height: 10px;
-  border: 3px solid var(--icon);
-  border-bottom: 0;
-  border-radius: 2px 2px 0 0;
-  box-sizing: border-box;
+	position: absolute;
+	left: 4px;
+	top: 0;
+	width: 14px;
+	height: 10px;
+	border: 3px solid var(--icon);
+	border-bottom: 0;
+	border-radius: 2px 2px 0 0;
+	box-sizing: border-box;
 }
 
 .statusBar.unlocked.animate .shackle {
-  animation: slide 2.5s ease-out both;
-  animation-delay: 200ms;
+	animation: slide 2.5s ease-out both;
+	animation-delay: 200ms;
 }
 
 .statusBar.locked.animate .shackle {
-  animation: slideClose 2.5s ease-out both;
-  animation-delay: 200ms;
+	animation: slideClose 2.5s ease-out both;
+	animation-delay: 200ms;
 }
 
 @keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  60% {
-    transform: translateX(9px);
-  }
-  100% {
-    transform: translateX(9px);
-  }
+	0% {
+		transform: translateX(0);
+	}
+	60% {
+		transform: translateX(9px);
+	}
+	100% {
+		transform: translateX(9px);
+	}
 }
 
 @keyframes slideClose {
-  0% {
-    transform: translateX(9px);
-  }
-  60% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
+	0% {
+		transform: translateX(9px);
+	}
+	60% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
 }
 
 .testControls {
-  display: flex;
-  gap: 10px;
+	display: flex;
+	gap: 10px;
 }
 
-.testControls button {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
-  cursor: pointer;
+.testControls .btn {
+	background: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 8px;
+	padding: 8px 12px;
+	font-size: 0.75rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.85);
+	cursor: pointer;
 }
 
-.testControls button:hover {
-  border-color: rgba(255, 255, 255, 0.35);
+.testControls .btn:hover {
+	border-color: rgba(255, 255, 255, 0.35);
+	background: transparent;
 }
 
 @keyframes slideFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(14px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .statusBar.animate {
-  animation: slideFadeIn 390ms ease-out;
+	animation: slideFadeIn 390ms ease-out;
 }
 
 @keyframes textSlideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateX(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 .stateText.animateText {
-  animation: textSlideIn 420ms ease-out;
-  animation-delay: 130ms;
-  animation-fill-mode: backwards;
+	animation: textSlideIn 420ms ease-out;
+	animation-delay: 130ms;
+	animation-fill-mode: backwards;
+}
+
+@media (max-width: 950px) {
+	body.cadenaPage {
+		padding-left: 0;
+	}
+
+	.cadenaUI {
+		width: calc(100vw - 24px);
+		margin: 10px auto 0;
+	}
 }

@@ -1,61 +1,64 @@
-<!doctype html>
-<html lang="en">
+﻿<!doctype html>
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Path Status UI</title>
+    <title>Statut chemin | The Lucid</title>
 
     <link rel="stylesheet" href="cadena.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body class="cadenaPage">
     <header class="sidebar">
       <div class="sidebarTop">
         <a class="brand" href="./main.html">
-          <img class="logoImg" src="images/logo.png" alt="Logo" />
+          <img class="logoImg" src="images/logo.jpg" alt="Logo" />
           <span class="mainTitle">The Lucid</span>
         </a>
       </div>
 
       <nav class="sidebarSection">
-        <span class="sectionLabel">Main</span>
-        <a class="navLink" href="./main.html">Overview</a>
-        <a class="navLink" href="./actors.html">Actors</a>
-        <a class="navLink" href="./scenes.html">Scenes</a>
+        <span class="sectionLabel">Principal</span>
+        <a class="navLink" href="./main.html">Aperçu</a>
+        <a class="navLink" href="./actors.html">Acteurs</a>
+        <a class="navLink" href="./scenes.html">Scènes</a>
         <a class="navLink" href="./variables.html">Variables</a>
+        <a class="navLink" href="./endings.html">Fins</a>
       </nav>
 
       <nav class="sidebarSection">
         <span class="sectionLabel">Interfaces</span>
-        <a class="navLink" href="choice.html">Button</a>
-        <a class="navLink" href="./index.html">Stability</a>
-        <a class="navLink" href="./cadena.html">Cadena</a>
+        <a class="navLink" href="./choice.html">Choix</a>
+        <a class="navLink" href="./index.html">Stabilité</a>
+        <a class="navLink" href="./cadena.html" aria-current="page">Statut chemin</a>
       </nav>
     </header>
 
-    <div class="testControls">
-      <label id="lockBtn" class="btn">Locked</label>
-      <label id="unlockBtn" class="btn">Unlocked</label>
-    </div>
+    <main class="cadenaUI">
+      <div class="testControls">
+        <label id="lockBtn" class="btn">Locked</label>
+        <label id="unlockBtn" class="btn">Unlocked</label>
+      </div>
 
-    <section class="statusBar unlocked" id="statusBar" aria-label="Path status">
-      <div class="rail" aria-hidden="true"></div>
+      <section class="statusBar unlocked" id="statusBar" aria-label="Path status">
+        <div class="rail" aria-hidden="true"></div>
 
-      <div class="content">
-        <div class="label">Path status</div>
-        <div class="stateRow">
-          <div class="stateText" id="stateText">Unlocked</div>
+        <div class="content">
+          <div class="label">Path status</div>
+          <div class="stateRow">
+            <div class="stateText" id="stateText">Unlocked</div>
 
-          <div class="lockWrap">
-            <div class="lock">
-              <div class="shackle"></div>
-              <div class="bodyIcon"></div>
+            <div class="lockWrap">
+              <div class="lock">
+                <div class="shackle"></div>
+                <div class="bodyIcon"></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <script>
       const bar = document.getElementById("statusBar");

@@ -1,0 +1,133 @@
+﻿.choicePage {
+  background:
+    radial-gradient(900px 420px at 72% -5%, rgba(255, 198, 116, 0.12), transparent 58%),
+    radial-gradient(700px 340px at 30% 95%, rgba(117, 143, 255, 0.12), transparent 60%),
+    linear-gradient(180deg, #05070c 0%, #0a0f17 44%, #06080f 100%);
+}
+
+.choicePage::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.018) 0 1px, transparent 1px 4px),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.04), transparent 60%);
+  mix-blend-mode: soft-light;
+  opacity: 0.4;
+}
+
+.choiceStage {
+  position: relative;
+  z-index: 1;
+  width: min(980px, calc(100vw - 300px));
+  margin-left: calc(248px + ((100vw - 248px - min(980px, calc(100vw - 300px))) / 2));
+  padding: 28px 0;
+}
+
+.choiceHeader {
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background:
+    linear-gradient(110deg, rgba(255, 255, 255, 0.08), transparent 52%),
+    linear-gradient(180deg, rgba(14, 18, 27, 0.92), rgba(9, 11, 18, 0.96));
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.45);
+}
+
+.choiceOverline {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(238, 242, 248, 0.66);
+  margin-bottom: 6px;
+}
+
+.choiceHeader h1 {
+  font-family: "Space Grotesk", "Manrope", sans-serif;
+  font-size: clamp(1.2rem, 1rem + 1vw, 1.75rem);
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+}
+
+.choiceHeader p {
+  color: rgba(238, 242, 248, 0.75);
+  font-size: 0.92rem;
+}
+
+.choicePage .choiceList {
+  margin-left: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.fmvChoiceList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.fmvChoice {
+  min-height: 68px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.025);
+  box-shadow: none;
+}
+
+.fmvChoice .choiceTag {
+  color: rgba(238, 242, 248, 0.52);
+  font-size: 0.62rem;
+}
+
+.fmvChoice .choiceText {
+  font-family: "Space Grotesk", "Manrope", sans-serif;
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
+}
+
+.fmvChoice .choiceHint {
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+}
+
+.fmvChoice.isLockedPath {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.fmvChoice.isLockedPath .choiceHint {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.fmvChoice.isOpenPath {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.fmvChoice.isOpenPath .choiceHint {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.fmvChoice.isRiskPath {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.fmvChoice.isRiskPath .choiceHint {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+@media (max-width: 950px) {
+  .choiceStage {
+    width: calc(100vw - 24px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 0;
+  }
+
+  .fmvChoiceList {
+    grid-template-columns: 1fr;
+  }
+}

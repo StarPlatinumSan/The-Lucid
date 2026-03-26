@@ -1,121 +1,110 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Actors | The Lucid</title>
+﻿<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Acteurs | The Lucid</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="sidebar">
-      <div class="sidebarTop">
-        <a class="brand" href="./main.html">
-          <img class="logoImg" src="images/logo.png" alt="Logo" />
-          <span class="mainTitle">The Lucid</span>
-        </a>
-      </div>
+	<body>
+		<header class="sidebar">
+			<div class="sidebarTop">
+				<a class="brand" href="./main.html">
+					<img class="logoImg" src="images/logo.jpg" alt="Logo" />
+					<span class="mainTitle">The Lucid</span>
+				</a>
+			</div>
 
-      <nav class="sidebarSection">
-        <span class="sectionLabel">Main</span>
-        <a class="navLink" href="./main.html">Overview</a>
-        <a class="navLink" href="./actors.html" aria-current="page">Actors</a>
-        <a class="navLink" href="./scenes.html">Scenes</a>
-        <a class="navLink" href="./variables.html">Variables</a>
-      </nav>
+			<nav class="sidebarSection">
+				<span class="sectionLabel">Principal</span>
+				<a class="navLink" href="./main.html">Aperçu</a>
+				<a class="navLink" href="./actors.html" aria-current="page">Acteurs</a>
+				<a class="navLink" href="./scenes.html">Scènes</a>
+				<a class="navLink" href="./variables.html">Variables</a>
+				<a class="navLink" href="./endings.html">Fins</a>
+			</nav>
 
-      <nav class="sidebarSection">
-        <span class="sectionLabel">Interfaces</span>
-        <a class="navLink" href="choice.html">Button</a>
-        <a class="navLink" href="./index.html">Stability</a>
-        <a class="navLink" href="./cadena.html">Cadena</a>
-      </nav>
-    </header>
+			<nav class="sidebarSection">
+				<span class="sectionLabel">Interfaces</span>
+				<a class="navLink" href="./choice.html">Choix</a>
+				<a class="navLink" href="./index.html">Stabilité</a>
+				<a class="navLink" href="./cadena.html">Statut chemin</a>
+			</nav>
+		</header>
 
-    <main class="contentPages">
-      <h1 class="pageTitle">Actors</h1>
+		<main class="contentPages">
+			<h1 class="pageTitle">Casting (passage ACTEURS)</h1>
 
-      <section class="actorGroup">
-        <h2 class="groupTitle">High Usage</h2>
+			<section class="actorGroup">
+				<h2 class="groupTitle">Usage élevé</h2>
+				<div class="actorRow">
+					<span class="role">Curateur</span>
+					<span class="actor">Galapagos</span>
+					<span class="meta">High (4 scènes)</span>
+				</div>
+			</section>
 
-        <div class="actorRow">
-          <span class="role">Masked Man</span>
-          <span class="actor">Yan Shek</span>
-          <span class="meta">5 scenes</span>
-        </div>
+			<section class="actorGroup">
+				<h2 class="groupTitle">Usage moyen-élevé</h2>
+				<div class="actorRow">
+					<span class="role">Masked Man</span>
+					<span class="actor">Yan</span>
+					<span class="meta">Medium-High (4 scènes)</span>
+				</div>
+			</section>
 
-        <div class="actorRow">
-          <span class="role">Curateur</span>
-          <span class="actor">Ernest Masson</span>
-          <span class="meta">4 scenes</span>
-        </div>
-      </section>
+			<section class="actorGroup">
+				<h2 class="groupTitle">Usage moyen</h2>
+				<div class="actorRow">
+					<span class="role">Brother</span>
+					<span class="actor">Charbel</span>
+					<span class="meta">Medium (3 scènes)</span>
+				</div>
+				<div class="actorRow">
+					<span class="role">Homeboy</span>
+					<span class="actor">Tom</span>
+					<span class="meta">Medium (3 scènes)</span>
+				</div>
+			</section>
 
-      <section class="actorGroup">
-        <h2 class="groupTitle">Medium Usage</h2>
+			<section class="actorGroup">
+				<h2 class="groupTitle">Usage moyen-faible</h2>
+				<div class="actorRow muted">
+					<span class="role">Friendgroup</span>
+					<span class="actor">Antoine, TBD, TBD +</span>
+					<span class="meta">Medium-Low (2 scènes)</span>
+				</div>
+				<div class="actorRow">
+					<span class="role">Neighbour</span>
+					<span class="actor">Gab</span>
+					<span class="meta">Low (1 scène)</span>
+				</div>
+			</section>
 
-        <div class="actorRow">
-          <span class="role">Brother</span>
-          <span class="actor">Charbel</span>
-          <span class="meta">3 scenes</span>
-        </div>
-
-        <div class="actorRow">
-          <span class="role">Homeboy</span>
-          <span class="actor">Tom</span>
-          <span class="meta">3 scenes</span>
-        </div>
-      </section>
-
-      <section class="actorGroup">
-        <h2 class="groupTitle">Medium–Low Usage</h2>
-
-        <div class="actorRow muted">
-          <span class="role">Friendgroup</span>
-          <span class="actor">TBD (4+)</span>
-          <span class="meta">2 scenes</span>
-        </div>
-      </section>
-
-      <section class="actorGroup">
-        <h2 class="groupTitle">Low Usage</h2>
-
-        <div class="actorRow">
-          <span class="role">Neighbour</span>
-          <span class="actor">Gab</span>
-          <span class="meta">1 scene</span>
-        </div>
-
-        <div class="actorRow">
-          <span class="role">Government Man</span>
-          <span class="actor">Mathias</span>
-          <span class="meta">1 scene</span>
-        </div>
-
-        <div class="actorRow muted">
-          <span class="role">Government Man</span>
-          <span class="actor">TBD</span>
-          <span class="meta">1 scene</span>
-        </div>
-
-        <div class="actorRow">
-          <span class="role">Cultist</span>
-          <span class="actor">Tiramisu</span>
-          <span class="meta">1 short scene</span>
-        </div>
-
-        <div class="actorRow muted">
-          <span class="role">Media Man</span>
-          <span class="actor">TBD</span>
-          <span class="meta">&lt;1 short scene</span>
-        </div>
-
-        <div class="actorRow muted">
-          <span class="role">Media Woman</span>
-          <span class="actor">TBD</span>
-          <span class="meta">&lt;1 short scene</span>
-        </div>
-      </section>
-    </main>
-  </body>
+			<section class="actorGroup">
+				<h2 class="groupTitle">Usage faible</h2>
+				<div class="actorRow">
+					<span class="role">Government man</span>
+					<span class="actor">Mathias</span>
+					<span class="meta">Low (1 scène)</span>
+				</div>
+				<div class="actorRow muted">
+					<span class="role">Hiding scared man</span>
+					<span class="actor">Vincent</span>
+					<span class="meta">Low (&lt;1 courte scène)</span>
+				</div>
+				<div class="actorRow">
+					<span class="role">Newsman</span>
+					<span class="actor">Adrian</span>
+					<span class="meta">Low (&lt;1 courte scène)</span>
+				</div>
+				<div class="actorRow muted">
+					<span class="role">Media woman</span>
+					<span class="actor">TBD</span>
+					<span class="meta">Low (&lt;1 courte scène)</span>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>

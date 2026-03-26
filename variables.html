@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -11,29 +11,30 @@
     <header class="sidebar">
       <div class="sidebarTop">
         <a class="brand" href="./main.html">
-          <img class="logoImg" src="images/logo.png" alt="Logo" />
+          <img class="logoImg" src="images/logo.jpg" alt="Logo" />
           <span class="mainTitle">The Lucid</span>
         </a>
       </div>
 
       <nav class="sidebarSection">
-        <span class="sectionLabel">Main</span>
-        <a class="navLink" href="./main.html">Overview</a>
-        <a class="navLink" href="./actors.html">Actors</a>
-        <a class="navLink" href="./scenes.html">Scenes</a>
+        <span class="sectionLabel">Principal</span>
+        <a class="navLink" href="./main.html">Aperçu</a>
+        <a class="navLink" href="./actors.html">Acteurs</a>
+        <a class="navLink" href="./scenes.html">Scènes</a>
         <a class="navLink" href="./variables.html" aria-current="page">Variables</a>
+        <a class="navLink" href="./endings.html">Fins</a>
       </nav>
 
       <nav class="sidebarSection">
         <span class="sectionLabel">Interfaces</span>
-        <a class="navLink" href="choice.html">Button</a>
-        <a class="navLink" href="./index.html">Stability</a>
-        <a class="navLink" href="./cadena.html">Cadena</a>
+        <a class="navLink" href="./choice.html">Choix</a>
+        <a class="navLink" href="./index.html">Stabilité</a>
+        <a class="navLink" href="./cadena.html">Statut chemin</a>
       </nav>
     </header>
 
     <main class="contentPages">
-      <h1 class="pageTitle">Variables</h1>
+      <h1 class="pageTitle">Variables gameplay</h1>
 
       <section class="panel">
         <div class="panelHeader">
@@ -42,166 +43,114 @@
         </div>
 
         <p class="panelText">
-          Chaque fois que le MC consomme la substance de lucidité, il perd en stabilité, n'étant pas immunisé à ses drawbacks. Il commence à +1, puis tombe à 0 après la première fois canon. Ensuite,
-          il peut consommer à plusieurs moments (optionnels ou obligatoires).
+          Chaque consommation impacte l'équilibre mental du MC. Il commence à 1 puis tombe à 0 après la première consommation canon. Ensuite, plusieurs prises optionnelles/obligatoires peuvent le
+          mener jusqu'à l'état critique.
         </p>
 
         <div class="grid2">
           <div class="subpanel">
-            <h3 class="subTitle">Consommations possibles</h3>
-
+            <h3 class="subTitle">Points de consommation</h3>
             <ol class="cleanList">
               <li>
-                <b>Voisin</b>
-                (optionnel), le voisin lui fait finir la bouteille
+                Voisin (optionnel, bouteille)
                 <span class="pill">max -1</span>
-                <div class="hint">Odds de consommer si le joueur préfère se cacher plutôt que confronter.</div>
               </li>
-
               <li>
-                <b>Forêt</b>
-                (obligatoire)
+                Forêt (obligatoire)
                 <span class="pill">max -2</span>
-                <div class="hint">Il va forcément dépenser une dose.</div>
               </li>
-
               <li>
-                <b>Chez ses potes</b>
-                (optionnel), pour reprendre le contrôle
+                Chez les amis, reprise de contrôle (optionnel)
                 <span class="pill">max -3</span>
-                <div class="hint">S'il consomme, son ami ne prend pas la dose. Odds de consommer: ~80%.</div>
               </li>
-
               <li>
-                <b>Avant la confrontation avec son frère</b>
-                (optionnel)
+                Avant confrontation avec Alex (optionnel)
                 <span class="pill">max -4</span>
-                <div class="hint">Il se verra offrir l'option sans que ce soit critique.</div>
               </li>
-
               <li>
-                <b>Tuer son frère</b>
-                (sans consommer)
+                Avant confrontation Curateur/Agent (optionnel)
                 <span class="pill danger">max -5</span>
-                <div class="hint">Si stabilité = -5, suicide si tue son frère ou chemin de fin verrouillé.</div>
               </li>
-
               <li>
-                <b>Avant la confrontation avec le curateur</b>
-                (optionnel)
+                Tuer son frère ajoute une pénalité de stabilité (sans consommation)
                 <span class="pill danger">max -5</span>
-                <div class="hint">Option proposée comme potentiellement critique si non-consommé à l'étape 4.</div>
               </li>
             </ol>
 
             <div class="callout">
-              Pour éviter de perdre sa lucidité avec le curateur (mauvaise fin), il doit consommer à l'étape 4 ou 5 et s'il ne veut pas se suicider après avoir tué son frère, il doit ne pas être en
-              état critique. Il se fera injecter s'il consomme tous les cachets en tombant automatiquement en état critique.
+              Gate critique: pour éviter les mauvaises fins de perte de lucidité avant les confrontations finales, le MC doit avoir consommé au bon moment (étape 4 ou étape 6 dans les notes de
+              design) et ne pas rester en état critique.
             </div>
           </div>
 
           <div class="subpanel">
-            <h3 class="subTitle">Stability status</h3>
+            <h3 class="subTitle">Statuts de stabilité</h3>
 
             <div class="statusTable">
-              <div class="row">
-                <span class="k">Stable</span>
-                <span class="v">0</span>
-                <span class="t">Stable</span>
-              </div>
-              <div class="row">
-                <span class="k">Troublé</span>
-                <span class="v">-1</span>
-                <span class="t">Disturbed</span>
-              </div>
-              <div class="row">
-                <span class="k">Dégradé</span>
-                <span class="v">-2</span>
-                <span class="t">Degraded</span>
-              </div>
-              <div class="row">
-                <span class="k">Instable</span>
-                <span class="v">-3</span>
-                <span class="t">Unstable</span>
-              </div>
-              <div class="row">
-                <span class="k">Défaillant</span>
-                <span class="v">-4</span>
-                <span class="t">Failing</span>
-              </div>
-              <div class="row critical">
-                <span class="k">Critique</span>
-                <span class="v">-5</span>
-                <span class="t">Critical</span>
-              </div>
+              <div class="row"><span class="k">Stable</span><span class="v">0</span><span class="t">Stable</span></div>
+              <div class="row"><span class="k">Troublé</span><span class="v">-1</span><span class="t">Disturbed</span></div>
+              <div class="row"><span class="k">Dégradé</span><span class="v">-2</span><span class="t">Degraded</span></div>
+              <div class="row"><span class="k">Instable</span><span class="v">-3</span><span class="t">Unstable</span></div>
+              <div class="row"><span class="k">Défaillant</span><span class="v">-4</span><span class="t">Failing</span></div>
+              <div class="row critical"><span class="k">Critique</span><span class="v">-5</span><span class="t">Critical</span></div>
             </div>
             <br />
-            <a class="navLink" href="./index.html">Voir l'interface</a>
+            <a class="navLink" href="./index.html">Voir l'interface stabilité</a>
           </div>
         </div>
       </section>
 
       <section class="panel">
         <div class="panelHeader">
-          <h2 class="panelTitle">Quantité</h2>
+          <h2 class="panelTitle">Quantité de doses</h2>
           <span class="badge">Inventaire</span>
         </div>
 
-        <p class="panelText">
-          Chaque fois que le MC trouve un cachet, il peut le cacher sur lui. Il commence à
-          <b>0</b>
-          , consomme une version
-          <b>liquide</b>
-          canon, puis il peut en trouver:
-        </p>
-
         <ul class="cleanBullets">
           <li>
-            <b>Départ du chalet</b>
-            , il part automatiquement avec 3 cachets
+            Départ du chalet: +3 cachets automatiques
             <span class="pill ok">+3</span>
           </li>
           <li>
-            <b>Reste de boisson</b>
-            si caché du voisin , odds ~30%
+            Reste de boisson si évite le voisin (~30%)
             <span class="pill">+1</span>
           </li>
           <li>
-            <b>Chambre du frère</b>
-            , odds ~40%
+            Chambre du frère (~40%)
             <span class="pill">+1</span>
           </li>
         </ul>
-
-        <div class="hint">Toute consommation arrive après ce stade.</div>
       </section>
 
       <section class="panel">
         <div class="panelHeader">
-          <h2 class="panelTitle">Objets clés</h2>
-          <span class="badge">Gates narratifs</span>
+          <h2 class="panelTitle">Objets et flags</h2>
+          <span class="badge">Narrative gates</span>
         </div>
 
         <div class="grid2">
           <div class="subpanel">
             <h3 class="subTitle">Arme à feu</h3>
-            <p class="panelText">Dans le hangar du curateur, le MC se voit offrir une arme pour se défendre.</p>
+            <p class="panelText">Remise au hangar. Active les routes de menace, défense et tir réflexe.</p>
           </div>
 
           <div class="subpanel">
-            <h3 class="subTitle">Clé</h3>
-            <p class="panelText">
-              Après avoir neutralisé son frère, le MC peut obtenir la clé du frère qui sert de passe pour accéder aux sous-terrains et débloquer la fin
-              <b>The Underground.</b>
-            </p>
+            <h3 class="subTitle">Clé / passe</h3>
+            <p class="panelText">Récupérable après neutralisation d'Alex. Ouvre la route vers l'Underground.</p>
           </div>
 
           <div class="subpanel">
-            <h3 class="subTitle">Boisson</h3>
-            <p class="panelText">Variante des cachets. Augmente les chances de garder son ami lucide. Il peut rester une dose si le MC évite le voisin.</p>
+            <h3 class="subTitle">Boisson (variante liquide)</h3>
+            <p class="panelText">Facilite la bascule de Charles en état lucide comparé à une pilule brute.</p>
+          </div>
+
+          <div class="subpanel">
+            <h3 class="subTitle">Flags Twine</h3>
+            <p class="panelText">Exemples directs du script: <code>laboratoire = true/false</code>, <code>[PATH LOCKED]</code>, <code>[PATH UNLOCKED]</code>, <code>[+1 DROGUE]</code>.</p>
           </div>
         </div>
       </section>
     </main>
   </body>
 </html>
+
