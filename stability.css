@@ -322,3 +322,47 @@ input[type="radio"] {
 #s5:checked ~ .card .v5 {
 	display: inline;
 }
+
+@media (max-width: 950px) {
+	body.stabilityPage {
+		padding-left: 0;
+		display: block;
+	}
+
+	.stability-ui {
+		width: calc(100vw - 24px);
+		margin: 10px auto 0;
+	}
+
+	.controls {
+		justify-content: center;
+	}
+
+	.card {
+		width: min(680px, 100%);
+	}
+}
+
+@media (max-width: 640px) {
+	.card {
+		padding: 14px;
+	}
+
+	.card-inner {
+		grid-template-columns: 10px 1fr;
+		gap: 10px;
+	}
+
+	.trend {
+		display: none;
+	}
+
+	.label {
+		font-size: 11px;
+		letter-spacing: 0.12em;
+	}
+
+	.value {
+		font-size: 28px;
+	}
+}

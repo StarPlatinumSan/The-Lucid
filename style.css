@@ -743,6 +743,19 @@ label {
 }
 
 @media (max-width: 640px) {
+	.panel {
+		padding: 12px;
+	}
+
+	.panelHeader {
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+
+	.badge {
+		white-space: normal;
+	}
+
 	.actorRow {
 		grid-template-columns: 1fr;
 		gap: 6px;
@@ -769,6 +782,25 @@ label {
 	.roadDetailPill {
 		font-size: 10px;
 	}
+
+	.statusTable .row {
+		grid-template-columns: 1fr;
+		gap: 4px;
+	}
+
+	.statusTable .v,
+	.statusTable .t {
+		text-align: left;
+	}
+
+	.choiceList {
+		gap: 10px;
+	}
+
+	.choiceBtn {
+		width: 100%;
+		padding: 0.9rem 1rem;
+	}
 }
 
 @media (max-width: 950px) {
@@ -792,8 +824,19 @@ label {
 		margin-left: 0;
 	}
 
-	.contentPages,
-	.choiceList {
+	.contentPages {
+		width: 100%;
+		max-width: none;
 		padding: 14px;
+	}
+
+	.choiceList {
+		position: static;
+		left: auto;
+		top: auto;
+		transform: none;
+		width: 100%;
+		padding: 14px;
+		justify-content: center;
 	}
 }

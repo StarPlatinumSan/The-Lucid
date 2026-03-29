@@ -239,3 +239,32 @@ body.cadenaPage {
 		margin: 10px auto 0;
 	}
 }
+
+@media (max-width: 640px) {
+	.testControls {
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.testControls .btn {
+		flex: 1 1 120px;
+		text-align: center;
+	}
+
+	.statusBar {
+		width: 100%;
+		max-width: 100%;
+		padding: 0.85rem;
+		gap: 12px;
+	}
+
+	.label {
+		font-size: 0.62rem;
+		letter-spacing: 0.16em;
+	}
+
+	.stateText {
+		font-size: 1.25rem;
+	}
+}
