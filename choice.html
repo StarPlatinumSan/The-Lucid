@@ -6,6 +6,115 @@
 		<title>Choix | The Lucid</title>
 
 		<link rel="stylesheet" href="style.css" />
+		<style>
+			.choiceBtn {
+				position: relative;
+				overflow: hidden;
+				min-width: clamp(190px, 24vw, 300px);
+				justify-content: center;
+				padding: 1.08rem 1.4rem;
+				border: 1px solid rgba(214, 214, 214, 0.22);
+				background-color: rgba(12, 14, 18, 0.94);
+				backdrop-filter: blur(4px);
+				color: rgba(236, 233, 224, 0.95);
+				font-family: "Space Grotesk", "Manrope", sans-serif;
+				font-size: 0.72rem;
+				font-weight: 700;
+				letter-spacing: 0.17em;
+				text-transform: uppercase;
+				border-radius: 0;
+				box-shadow:
+					0 12px 24px rgba(0, 0, 0, 0.54),
+					inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+				transition:
+					transform 160ms ease,
+					border-color 160ms ease,
+					background-color 160ms ease,
+					box-shadow 160ms ease,
+					color 160ms ease;
+			}
+
+			.choiceBtn::before {
+				content: "";
+				position: absolute;
+				inset: 3px;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				border-radius: 0;
+				opacity: 0.9;
+				pointer-events: none;
+			}
+
+			.choiceBtn::after {
+				content: "";
+				position: absolute;
+				top: -8%;
+				bottom: -8%;
+				left: 60%;
+				width: 1px;
+				background-color: rgba(244, 240, 231, 0.2);
+				box-shadow: -18px 0 0 rgba(228, 224, 216, 0.14);
+				transform: rotate(4deg);
+				opacity: 0.3;
+				transition:
+					opacity 160ms ease,
+					transform 160ms ease;
+				pointer-events: none;
+			}
+
+			.choiceBtn:hover {
+				transform: translateY(-1px);
+				border-color: rgba(236, 233, 224, 0.42);
+				background-color: rgba(14, 16, 21, 0.98);
+				box-shadow:
+					0 14px 26px rgba(0, 0, 0, 0.62),
+					0 0 0 1px rgba(244, 240, 231, 0.12),
+					inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+				color: rgba(248, 246, 240, 0.98);
+			}
+
+			.choiceBtn:hover::after {
+				opacity: 0.38;
+				transform: rotate(5deg) translateX(1px);
+			}
+
+			.choiceBtn:active {
+				transform: translateY(0);
+				background-color: rgba(9, 11, 15, 0.98);
+			}
+
+			.choiceBtn:focus-visible {
+				box-shadow:
+					0 0 0 2px rgba(233, 227, 209, 0.3),
+					0 12px 22px rgba(0, 0, 0, 0.6);
+			}
+
+			.choiceText {
+				position: relative;
+				z-index: 1;
+			}
+
+			.choiceBtn.isLocked,
+			.choiceBtn:disabled {
+				opacity: 1;
+				color: rgba(236, 233, 224, 0.42);
+				border-color: rgba(210, 210, 210, 0.14);
+				background-color: rgba(15, 16, 20, 0.78);
+				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+				transform: none;
+			}
+
+			.choiceBtn.isLocked::after,
+			.choiceBtn:disabled::after {
+				opacity: 0.18;
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				.choiceBtn,
+				.choiceBtn::after {
+					transition: none;
+				}
+			}
+		</style>
 	</head>
 
 	<body>
