@@ -1,78 +1,78 @@
 ﻿<!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stabilité | The Lucid</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stabilité | The Lucid</title>
 
-    <link rel="stylesheet" href="stability.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+		<link rel="stylesheet" href="stability.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-  <body class="stabilityPage">
-    <header class="sidebar">
-      <div class="sidebarTop">
-        <a class="brand" href="./main.html">
-          <img class="logoImg" src="images/logo.jpg" alt="Logo" />
-          <span class="mainTitle">The Lucid</span>
-        </a>
-      </div>
+	<body class="stabilityPage">
+		<header class="sidebar">
+			<div class="sidebarTop">
+				<a class="brand" href="./main.html">
+					<img class="logoImg" src="images/logo.jpg" alt="Logo" />
+					<span class="mainTitle">The Lucid</span>
+				</a>
+			</div>
 
-      <nav class="sidebarSection">
-        <span class="sectionLabel">Principal</span>
-        <a class="navLink" href="./main.html">Aperçu</a>
-        <a class="navLink" href="./actors.html">Acteurs</a>
-        <a class="navLink" href="./scenes.html">Scènes</a>
-        <a class="navLink" href="./variables.html">Variables</a>
-        <a class="navLink" href="./endings.html">Fins</a>
-      </nav>
+			<nav class="sidebarSection">
+				<span class="sectionLabel">Principal</span>
+				<a class="navLink" href="./main.html">Aperçu</a>
+				<a class="navLink" href="./actors.html">Acteurs</a>
+				<a class="navLink" href="./scenes.html">Scènes</a>
+				<a class="navLink" href="./variables.html">Variables</a>
+				<a class="navLink" href="./endings.html">Fins</a>
+			</nav>
 
-      <nav class="sidebarSection">
-        <span class="sectionLabel">Interfaces</span>
-        <a class="navLink" href="./choice.html">Choix</a>
-        <a class="navLink" href="./index.html" aria-current="page">Stabilité</a>
-        <a class="navLink" href="./cadena.html">Statut chemin</a>
-      </nav>
-    </header>
+			<nav class="sidebarSection">
+				<span class="sectionLabel">Interfaces</span>
+				<a class="navLink" href="./choice.html">Choix</a>
+				<a class="navLink" href="./index.html" aria-current="page">Stabilité</a>
+				<a class="navLink" href="./cadena.html">Statut chemin</a>
+			</nav>
+		</header>
 
-    <div class="stability-ui">
-      <input type="radio" name="stability" id="s0" checked />
-      <input type="radio" name="stability" id="s1" />
-      <input type="radio" name="stability" id="s2" />
-      <input type="radio" name="stability" id="s3" />
-      <input type="radio" name="stability" id="s4" />
-      <input type="radio" name="stability" id="s5" />
+		<div class="stability-ui">
+			<input type="radio" name="stability" id="s0" checked />
+			<input type="radio" name="stability" id="s1" />
+			<input type="radio" name="stability" id="s2" />
+			<input type="radio" name="stability" id="s3" />
+			<input type="radio" name="stability" id="s4" />
+			<input type="radio" name="stability" id="s5" />
 
-      <div class="controls">
-        <label class="btn" for="s0">Stable (0)</label>
-        <label class="btn" for="s1">Troublé (-1)</label>
-        <label class="btn" for="s2">Dégradé (-2)</label>
-        <label class="btn" for="s3">Instable (-3)</label>
-        <label class="btn" for="s4">Défaillant (-4)</label>
-        <label class="btn" for="s5">Critique (-5)</label>
-      </div>
+			<div class="controls">
+				<label class="btn" for="s0">Stable (0)</label>
+				<label class="btn" for="s1">Troublé (-1)</label>
+				<label class="btn" for="s2">Dégradé (-2)</label>
+				<label class="btn" for="s3">Instable (-3)</label>
+				<label class="btn" for="s4">Défaillant (-4)</label>
+				<label class="btn" for="s5">Critique (-5)</label>
+			</div>
 
-      <div class="card">
-        <div class="card-inner">
-          <div class="bar"></div>
+			<div class="card">
+				<div class="card-inner">
+					<div class="bar"></div>
 
-          <div>
-            <div class="label">Statut de stabilité</div>
-            <div class="value">
-              <span class="v0">STABLE</span>
-              <span class="v1">DISTURBED</span>
-              <span class="v2">DEGRADED</span>
-              <span class="v3">UNSTABLE</span>
-              <span class="v4">FAILING</span>
-              <span class="v5">CRITICAL</span>
-            </div>
-          </div>
+					<div>
+						<div class="label">Statut de stabilité</div>
+						<div class="value">
+							<span class="v0">STABLE</span>
+							<span class="v1">DISTURBED</span>
+							<span class="v2">DEGRADED</span>
+							<span class="v3">UNSTABLE</span>
+							<span class="v4">FAILING</span>
+							<span class="v5">CRITICAL</span>
+						</div>
+					</div>
 
-          <div class="trend">
-            <div class="arrow"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+					<div class="trend">
+						<div class="arrow"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
